@@ -7,12 +7,12 @@ export const WindowWidthSize = createContext();
 
 function App() {
   // 로그 제거 코드
-  // if (process.env.NODE_ENV === "production") {
-  //   console = window.console || {};
-  //   console.log = function no_console() {};
-  //   console.warn = function no_console() {};
-  //   console.error = function no_console() {};
-  // }
+  if (process.env.NODE_ENV === "production") {
+    console = window.console || {};
+    console.log = function no_console() {};
+    console.warn = function no_console() {};
+    console.error = function no_console() {};
+  }
 
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
   useEffect(() => {
