@@ -1,6 +1,6 @@
 import { createContext, lazy, Suspense, useEffect, useState } from "react";
 import Main from "./screens/Main";
-import { BrowserRouter, Routes, Route, useLocation } from "react-router-dom";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 const Header = lazy(() => import("./components/Header"));
 export const WindowWidthSize = createContext();
