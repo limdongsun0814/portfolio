@@ -43,7 +43,7 @@ function App() {
             <Header />
             <Routes>
               <Route path="/" element={<Main />}></Route>
-              <Route path="/react" element={<Main />}></Route>
+              <Route path="/portfolio" element={<Main />}></Route>
             </Routes>
           </BrowserRouter>
         </div>
