@@ -1,0 +1,80 @@
+name: Deploy
+
+on:
+  push:
+    branches: ['main']
+  workflow_dispatch:
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Use repository source
+        uses: actions/checkout@v3
+
+      - name: Use Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: 20.11.0
+          
+      - name: Cache node moules
+        id: cache
+        uses: actions/cache@v3
+        with:
+          path: '**/node_modules'
+          key: ${{runner.os}}-node-${{hashFiles('**/package-lock.json')}}
+          restore-keys: ${{runner.os}}-node-
+          
+      - name: list
+        run: ls
+       
+      - name: Install modules
+        run: | 
+          cd project
+          ls
+          npm ci
+        if: steps.cache.outputs.cache-hit != 'true'
+      
+      - name: Set public url
+        run: |
+          echo $GITHUB_REPOSITORY
+          PUBLIC_URL=$(echo $GITHUB_REPOSITORY | sed -r 's/^.+\/(.+)$/\/\1\//')
+          echo PUBLIC_URL=$PUBLIC_URL > ./env
+
+      - name: set .env
+        run: |
+          cd project
+          echo "REACT_APP_GA4_PROPERTY_ID=${{ secrets.REACT_APP_GA4_PROPERTY_ID }}" >> $GITHUB_ENV
+          echo "REACT_APP_OAUTH_CLIENT_ID=${{ secrets.REACT_APP_OAUTH_CLIENT_ID }}" >> $GITHUB_ENV
+          echo "REACT_APP_OAUTH_CLIENT_SECRET=${{ secrets.REACT_APP_OAUTH_CLIENT_SECRET }}" >> $GITHUB_ENV
+          echo "REACT_APP_OAUTH_REFRESH_TOKEN=${{ secrets.REACT_APP_OAUTH_REFRESH_TOKEN }}" >> $GITHUB_ENV
+          echo "REACT_APP_VIDEO_PATH_SECRET=${{secrets.REACT_APP_VIDEO_PATH_SECRET}}" >> $GITHUB_ENV
+        
+      - name: list
+        run: ls -l
+
+      - name: change react slick
+        run: |
+          ls
+          cd project/node_modules/react-slick/lib
+          ls
+          rm track.js
+          echo '${{ secrets.TRACK }}' > track.js
+
+      - name: build
+        run: |
+          ls
+          cd project
+          npm run build2
+          ls
+          cp build/index.html build/404.html
+          
+      - name: git lfs logs last
+        run: git lfs logs last
+        
+      - name: gh-page
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{secrets.GITHYB_TOKEN}}
+          publish_dir: ./project/build
+    
