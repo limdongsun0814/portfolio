@@ -49,6 +49,7 @@ jobs:
           echo "REACT_APP_OAUTH_CLIENT_SECRET=${{ secrets.REACT_APP_OAUTH_CLIENT_SECRET }}" >> $GITHUB_ENV
           echo "REACT_APP_OAUTH_REFRESH_TOKEN=${{ secrets.REACT_APP_OAUTH_REFRESH_TOKEN }}" >> $GITHUB_ENV
           echo "REACT_APP_VIDEO_PATH_SECRET=${{secrets.REACT_APP_VIDEO_PATH_SECRET}}" >> $GITHUB_ENV
+          echo "REACT_APP_PDF_PATH_SECRET=${{secrets.REACT_APP_PDF_PATH_SECRET}}" >> $GITHUB_ENV
 
       - name: list
         run: ls -l

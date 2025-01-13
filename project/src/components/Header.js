@@ -27,16 +27,22 @@ const Header = () => {
   }
 
   const pdfDownload = () => {
-    const url = "./downloadFile/임동선 포트폴리오.pdf";
-    const a = document.createElement("a");
-    a.href = url;
-    a.download = "임동선 포트폴리오.pdf";
-    document.body.appendChild(a);
-    a.click();
-    setTimeout(() => {
-      window.URL.revokeObjectURL(url);
-    }, 1000);
-    a.remove();
+    axios.get(process.env.REACT_APP_PDF_PATH_SECRET,{
+      responseType: 'blob',
+    })
+    .then((rep)=>{
+      const blob = new Blob([rep.data],{type:rep.headers['content-type']});
+      const url = window.URL.createObjectURL(blob);
+      const a = document.createElement("a");
+      a.href = url;
+      a.download = "임동선 포트폴리오.pdf";
+      document.body.appendChild(a);
+      a.click();
+      setTimeout(() => {
+        window.URL.revokeObjectURL(url);
+      }, 1000);
+      a.remove();
+    }).catch((e)=>{console.log(e);});
   };
   return (
     <>
