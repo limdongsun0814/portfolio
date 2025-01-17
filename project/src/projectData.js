@@ -185,7 +185,7 @@ const projects = [
     day: "2019-01-02 ~ 2019-12-29 참여 인원: 4",
   },
   {
-    title: "나사대회",
+    title: "행성 탐사용 자동화 제어 로봇 개발",
     image: "./images/나사대회.png",
     description: [
       {
