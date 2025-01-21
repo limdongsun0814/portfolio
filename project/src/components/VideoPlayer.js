@@ -1,9 +1,10 @@
-import React, { useRef, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import ReactPlayer from "react-player";
 import RangeSlider from "react-range-slider-input";
 import { Tooltip } from "react-tooltip";
 import "react-range-slider-input/dist/style.css";
 import "../range-slider.css";
+import MenuTimer from "../utils/MenuTimer";
 
 function VideoPlayer(props) {
   const playbackRateList = [0.5, 1.0, 1.5, 2.0]; //[0.25, 0.5, 0.75, 1.0, 1.25, 1.5, 1.75, 2.0]
@@ -16,10 +17,12 @@ function VideoPlayer(props) {
   const [menu, setMenu] = useState(false);
   const [played, setPlayed] = useState({ played: 0, totalPlayed: 0 });
   const [playbackRate, setPlaybackRate] = useState(1.0);
+  const menuTimer = new MenuTimer();
 
   const handlePlaybackRate = (value) => {
     setPlaybackRate(value);
   };
+
   const fullscreen = () => {
     console.log(playerRef.current, "fullscreen");
     if (playerRef.current) {
@@ -66,6 +69,7 @@ function VideoPlayer(props) {
         }}
         onClick={() => {
           setMenu(true);
+          menuTimer.setTime(setMenu);
         }}
         width={"100%"}
         height={"100%"}
@@ -103,6 +107,7 @@ function VideoPlayer(props) {
                   className="cursor-pointer"
                   onClick={() => {
                     setPlaying(false);
+                    menuTimer.setTime(setMenu);
                   }}
                 />
               ) : (
@@ -112,6 +117,7 @@ function VideoPlayer(props) {
                   className="cursor-pointer"
                   onClick={() => {
                     setPlaying(true);
+                    menuTimer.setTime(setMenu);
                   }}
                 />
               )}
@@ -125,6 +131,7 @@ function VideoPlayer(props) {
                   className="inline-block w-[25%] mx-1 cursor-pointer"
                   onClick={() => {
                     setVolumeToggle(true);
+                    menuTimer.setTime(setMenu);
                   }}
                 />
               ) : (
@@ -134,6 +141,7 @@ function VideoPlayer(props) {
                   className="inline-block w-[25%] mx-1 cursor-pointer"
                   onClick={() => {
                     setVolumeToggle(false);
+                    menuTimer.setTime(setMenu);
                   }}
                 />
               )}
@@ -147,6 +155,10 @@ function VideoPlayer(props) {
                   onInput={(e) => {
                     console.log("soundVolume", e);
                     setVolume(e[1]);
+                    menuTimer.setClearTime();
+                  }}
+                  onThumbDragEnd={() => {
+                    menuTimer.setTime(setMenu);
                   }}
                   disabled={!volumeToggle}
                 />
@@ -173,6 +185,10 @@ function VideoPlayer(props) {
                   onInput={(e) => {
                     console.log(e);
                     playerRef.current.seekTo(e[1]);
+                    menuTimer.setClearTime();
+                  }}
+                  onThumbDragEnd={() => {
+                    menuTimer.setTime(setMenu);
                   }}
                 />
               </div>
@@ -216,6 +232,7 @@ function VideoPlayer(props) {
                       className="px-4 py-1 rounded cursor-pointer hover:bg-zinc-800"
                       onClick={(e) => {
                         handlePlaybackRate(value);
+                        menuTimer.setTime(setMenu);
                       }}
                       key={index}
                     >
@@ -235,6 +252,7 @@ function VideoPlayer(props) {
                 className="cursor-pointer"
                 onClick={() => {
                   setPlaying(false);
+                  menuTimer.setTime(setMenu);
                 }}
               />
             </div>
