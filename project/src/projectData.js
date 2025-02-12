@@ -175,7 +175,7 @@ const projects = [
         descriptionList: ["검사기 모터 제어, 회로 설계"],
       },
     ],
-    tools: ["Arduino", "OpenCV", "Python", "Android"],
+    tools: ["Arduino", "OpenCV", "Python", "Android", "PLC"],
     github: "https://github.com/limdongsun0814/Tap-Inspection",
     linkCheck: true,
     link: "https://ieeexplore.ieee.org/document/9268255",
