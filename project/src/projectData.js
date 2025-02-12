@@ -24,7 +24,7 @@ const projects = [
       {
         titleDescription: "담당역할",
         descriptionList: [
-          "  DB 설계, 카드 해택, 크롤링, 딥러닝 모델 설계, CSS 및 기능 통합",
+          "  DB 설계, DB docker 배포, 회원가입 및 로그인 , 소셜로그인, 장바구니, 결제, 검색",
         ],
       },
     ],
