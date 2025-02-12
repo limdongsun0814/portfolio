@@ -117,7 +117,7 @@ const projects = [
       {
         titleDescription: "프로젝트 개요",
         descriptionList: [
-          "   - 각종 센서 센싱 및 외부기기 자동제어",
+          "   - 센서 센싱 및 외부기기 자동제어",
           "   - 최적의 광량을 공급하는 반사판 제어 및 모니터링 시스템",
         ],
       },
