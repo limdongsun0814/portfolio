@@ -78,7 +78,7 @@ const projects = [
   }, //이미지
 
   {
-    title: "수로",
+    title: "스마트 밸브",
     image: "./images/수로.png",
     description: [
       {
