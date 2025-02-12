@@ -132,7 +132,7 @@ const projects = [
       },
       {
         titleDescription: "담당역할",
-        descriptionList: ["센서 센싱, 반사판 제어"],
+        descriptionList: ["센서 센싱, 반사판 제어, CO2 발생기 및 환풍기 제어"],
       },
     ],
     tools: ["Arduino", "Android", "I2C", "HTTP", "MySQL"],
