@@ -28,7 +28,7 @@ const projects = [
         ],
       },
     ],
-    tools: ["React", "Javascript", "Spring Boot", "MySQL", "Python"],
+    tools: ["React Native", "Spring Boot", "MySQL", "Python", "tensorflow", "docker", "HTTP"],
     github: "https://github.com/shinhan3/mungzoup",
     linkCheck: false,
     link: "",
@@ -67,7 +67,7 @@ const projects = [
         ],
       },
     ],
-    tools: ["JSP", "Javascript", "Spring framework", "mariaDB"],
+    tools: ["JSP", "Spring Framework", "mariaDB", "docker", "SSE", "HTTP"],
     github: "https://github.com/limdongsun0814/4shinhan",
     linkCheck: false,
     link: "",
@@ -111,40 +111,6 @@ const projects = [
     day: "2020-06-28 ~ 2021-12-28 참여 인원: 4",
   },
   {
-    title: "스마트팜",
-    image: "./images/스마트팜.png",
-    description: [
-      {
-        titleDescription: "프로젝트 개요",
-        descriptionList: [
-          "   - 센서 센싱 및 외부기기 자동제어",
-          "   - 최적의 광량을 공급하는 반사판 제어 및 모니터링 시스템",
-        ],
-      },
-      {
-        titleDescription: "서비스 특징",
-        descriptionList: [
-          "   - 반사판 제어 알고리즘",
-          "     1. 공장이 처음으로 기동 시 회전 가능한 각도를 전부 탐색하는 scan",
-          "     2. scan 이후 경사하강법을 활용한 최적의 광량 제어",
-          "   - 스마트팜 모니터링 및 센서 기준치 제어 시스템 ",
-        ],
-      },
-      {
-        titleDescription: "담당역할",
-        descriptionList: ["센서 센싱, 반사판 제어, CO2 발생기 및 환풍기 제어"],
-      },
-    ],
-    tools: ["Arduino", "Android", "I2C", "HTTP", "MySQL"],
-    github: "https://github.com/limdongsun0814/SmartFarm",
-    linkCheck: true,
-    link: "https://ieeexplore.ieee.org/document/9268238",
-    video: "스마트팜.mp4",
-    videoMobile:
-      "https://1drv.ms/v/c/dd3bc808d6b4a8bc/IQQUXJkM9X6OSqB2uwr6WngmAZ6fV6UR3xImQFQ5FIj88EI",
-    day: "2019-01-02 ~ 2019-12-29 참여 인원: 4",
-  },
-  {
     title: "탭 검사기",
     image: "./images/탭검사기.png",
     description: [
@@ -175,13 +141,47 @@ const projects = [
         descriptionList: ["검사기 모터 제어, 회로 설계"],
       },
     ],
-    tools: ["Arduino", "OpenCV", "Python", "Android", "PLC"],
+    tools: ["Arduino", "OpenCV", "Python", "Android", "PLC", "MySQL", "HTTP", "SPI"],
     github: "https://github.com/limdongsun0814/Tap-Inspection",
     linkCheck: true,
     link: "https://ieeexplore.ieee.org/document/9268255",
     video: "탭 검사기.mp4",
     videoMobile:
       "https://1drv.ms/v/c/dd3bc808d6b4a8bc/IQSAn5R9iLFzR4-oj300uw5dAQybz-1UBk8_XjFU9OppIuI",
+    day: "2019-01-02 ~ 2019-12-29 참여 인원: 4",
+  },
+  {
+    title: "스마트팜",
+    image: "./images/스마트팜.png",
+    description: [
+      {
+        titleDescription: "프로젝트 개요",
+        descriptionList: [
+          "   - 센서 센싱 및 외부기기 자동제어",
+          "   - 최적의 광량을 공급하는 반사판 제어 및 모니터링 시스템",
+        ],
+      },
+      {
+        titleDescription: "서비스 특징",
+        descriptionList: [
+          "   - 반사판 제어 알고리즘",
+          "     1. 공장이 처음으로 기동 시 회전 가능한 각도를 전부 탐색하는 scan",
+          "     2. scan 이후 경사하강법을 활용한 최적의 광량 제어",
+          "   - 스마트팜 모니터링 및 센서 기준치 제어 시스템 ",
+        ],
+      },
+      {
+        titleDescription: "담당역할",
+        descriptionList: ["센서 센싱, 반사판 제어, CO2 발생기 및 환풍기 제어"],
+      },
+    ],
+    tools: ["Arduino", "Android", "I2C", "HTTP", "MySQL", "MQTT"],
+    github: "https://github.com/limdongsun0814/SmartFarm",
+    linkCheck: true,
+    link: "https://ieeexplore.ieee.org/document/9268238",
+    video: "스마트팜.mp4",
+    videoMobile:
+      "https://1drv.ms/v/c/dd3bc808d6b4a8bc/IQQUXJkM9X6OSqB2uwr6WngmAZ6fV6UR3xImQFQ5FIj88EI",
     day: "2019-01-02 ~ 2019-12-29 참여 인원: 4",
   },
   {
