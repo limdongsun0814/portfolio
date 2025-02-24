@@ -33,7 +33,7 @@ jobs:
           cd project
           ls
           npm ci
-        if: steps.cache.outputs.cache-hit != 'true'
+        #if: steps.cache.outputs.cache-hit != 'true'
 
       - name: Set public url
         run: |
