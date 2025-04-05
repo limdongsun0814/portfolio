@@ -6,7 +6,7 @@ const Header = lazy(() => import("./components/Header"));
 export const WindowWidthSize = createContext();
 
 function App() {
-  // 로그 제거 코드
+  // 로그 제거 코드s
   if (process.env.NODE_ENV === "production") {
     console = window.console || {};
     console.log = function no_console() {};
