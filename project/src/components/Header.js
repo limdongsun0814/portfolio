@@ -61,7 +61,7 @@ const Header = () => {
         <ul
           className={classNames(
             "flex flex-row justify-center  md:space-x-10 md:text-xl md:justify-end font-bold ",
-            navClass
+            navClass,
           )}
         >
           {windowWidth > 384 && (
@@ -71,7 +71,7 @@ const Header = () => {
                 href="#"
                 className={classNames(
                   "py-1 rounded-lg hover:bg-gray focus:bg-gray ",
-                  aClass
+                  aClass,
                 )}
               >
                 Download PDF
@@ -83,7 +83,7 @@ const Header = () => {
               href="#projects"
               className={classNames(
                 "py-1 rounded-lg hover:bg-gray focus:bg-gray ",
-                aClass
+                aClass,
               )}
             >
               Projects
@@ -94,7 +94,7 @@ const Header = () => {
               href="#skill"
               className={classNames(
                 "py-1 rounded-lg hover:bg-gray focus:bg-gray ",
-                aClass
+                aClass,
               )}
             >
               Skills & Tools
@@ -105,7 +105,7 @@ const Header = () => {
               href="#contact"
               className={classNames(
                 "py-1 rounded-lg hover:bg-gray focus:bg-gray ",
-                aClass
+                aClass,
               )}
             >
               Contact
@@ -124,7 +124,7 @@ const Header = () => {
           >
             <img
               alt=""
-              src="./images/icons/Group 39 (1).png"
+              src={`${process.env.PUBLIC_URL}/images/icons/Group 39 (1).png`}
               className=""
             ></img>
           </div>
@@ -138,7 +138,7 @@ const Header = () => {
             <img
               alt=""
               className="rotate-180"
-              src="./images/icons/Group 39 (1).png"
+              src={`${process.env.PUBLIC_URL}/images/icons/Group 39 (1).png`}
             ></img>
           </div>
         </div>

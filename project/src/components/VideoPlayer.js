@@ -102,7 +102,7 @@ function VideoPlayer(props) {
             <div className="w-[5%] h-full ">
               {playing ? (
                 <img
-                  src="./images/icons/video/pause.svg"
+                  src={`${process.env.PUBLIC_URL}/images/icons/video/pause.svg`}
                   alt="link to live website"
                   className="cursor-pointer"
                   onClick={() => {
@@ -112,7 +112,7 @@ function VideoPlayer(props) {
                 />
               ) : (
                 <img
-                  src="./images/icons/video/start.svg"
+                  src={`${process.env.PUBLIC_URL}/images/icons/video/start.svg`}
                   alt="link to live website"
                   className="cursor-pointer"
                   onClick={() => {
@@ -126,7 +126,7 @@ function VideoPlayer(props) {
             <div className="w-[15%] h-full flex items-center justify-center">
               {!volumeToggle || !volume ? (
                 <img
-                  src="./images/icons/video/soundOff.svg"
+                  src={`${process.env.PUBLIC_URL}/images/icons/video/soundOff.svg`}
                   alt="link to live website"
                   className="inline-block w-[25%] mx-1 cursor-pointer"
                   onClick={() => {
@@ -136,7 +136,7 @@ function VideoPlayer(props) {
                 />
               ) : (
                 <img
-                  src="./images/icons/video/soundOn.svg"
+                  src={`${process.env.PUBLIC_URL}/images/icons/video/soundOn.svg`}
                   alt="link to live website"
                   className="inline-block w-[25%] mx-1 cursor-pointer"
                   onClick={() => {
@@ -247,7 +247,7 @@ function VideoPlayer(props) {
             {/* 전체 */}
             <div className="w-[5%] h-full" onClick={fullscreen}>
               <img
-                src="./images/icons/video/fullScreen.svg"
+                src={`${process.env.PUBLIC_URL}/images/icons/video/fullScreen.svg`}
                 alt="link to live website"
                 className="cursor-pointer"
                 onClick={() => {

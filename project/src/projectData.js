@@ -2,7 +2,7 @@
 const projects = [
   {
     title: "멍줍",
-    image: "./images/멍줍.png",
+    image: `${process.env.PUBLIC_URL}/images/멍줍.png`,
     description: [
       {
         titleDescription: "프로젝트 개요",
@@ -28,7 +28,15 @@ const projects = [
         ],
       },
     ],
-    tools: ["React Native", "Spring Boot", "MySQL", "Python", "tensorflow", "docker", "HTTP"],
+    tools: [
+      "React Native",
+      "Spring Boot",
+      "MySQL",
+      "Python",
+      "tensorflow",
+      "docker",
+      "HTTP",
+    ],
     github: "https://github.com/shinhan3/mungzoup",
     linkCheck: false,
     link: "",
@@ -39,7 +47,7 @@ const projects = [
   },
   {
     title: "동네빵집 플랫폼",
-    image: "./images/빵이오.png",
+    image: `${process.env.PUBLIC_URL}/images/빵이오.png`,
     description: [
       {
         titleDescription: "프로젝트 개요",
@@ -79,7 +87,7 @@ const projects = [
 
   {
     title: "스마트 밸브",
-    image: "./images/수로.png",
+    image: `${process.env.PUBLIC_URL}/images/수로.png`,
     description: [
       {
         titleDescription: "프로젝트 개요",
@@ -112,7 +120,7 @@ const projects = [
   },
   {
     title: "탭 검사기",
-    image: "./images/탭검사기.png",
+    image: `${process.env.PUBLIC_URL}/images/탭검사기.png`,
     description: [
       {
         titleDescription: "프로젝트 개요",
@@ -141,7 +149,16 @@ const projects = [
         descriptionList: ["검사기 모터 제어, 회로 설계"],
       },
     ],
-    tools: ["Arduino", "OpenCV", "Python", "Android", "PLC", "MySQL", "HTTP", "SPI"],
+    tools: [
+      "Arduino",
+      "OpenCV",
+      "Python",
+      "Android",
+      "PLC",
+      "MySQL",
+      "HTTP",
+      "SPI",
+    ],
     github: "https://github.com/limdongsun0814/Tap-Inspection",
     linkCheck: true,
     link: "https://ieeexplore.ieee.org/document/9268255",
@@ -152,7 +169,7 @@ const projects = [
   },
   {
     title: "스마트팜",
-    image: "./images/스마트팜.png",
+    image: `${process.env.PUBLIC_URL}/images/스마트팜.png`,
     description: [
       {
         titleDescription: "프로젝트 개요",
@@ -186,7 +203,7 @@ const projects = [
   },
   {
     title: "행성 탐사용 자동화 제어 로봇 개발",
-    image: "./images/나사대회.png",
+    image: `${process.env.PUBLIC_URL}/images/나사대회.png`,
     description: [
       {
         titleDescription: "대회 목표",

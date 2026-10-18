@@ -122,7 +122,7 @@ const Contact = () => {
               <div className="flex space-x-3">
                 <p className="font-bold text-orange-200">이메일</p>
                 <img
-                  src="./images/icons/send-email.png"
+                  src={`${process.env.PUBLIC_URL}/images/icons/send-email.png`}
                   alt=""
                   width="24px"
                   height="24px"
@@ -151,7 +151,7 @@ const Contact = () => {
                   data-tooltip-content="Github Link"
                 >
                   <img
-                    src="./images/icons/github.svg"
+                    src={`${process.env.PUBLIC_URL}/images/icons/github.svg`}
                     alt=""
                     width="24px"
                     height="24px"
@@ -173,7 +173,7 @@ const Contact = () => {
                   data-tooltip-content="Docker Link"
                 >
                   <img
-                    src="./images/icons/docker.png"
+                    src={`${process.env.PUBLIC_URL}/images/icons/docker.png`}
                     alt=""
                     width="24px"
                     height="24px"

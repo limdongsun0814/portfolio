@@ -15,7 +15,7 @@ const Skill = () => {
           aria-label="Java"
         >
           <img
-            src="./images/icons/free-icon-java-3291669.png"
+            src={`${process.env.PUBLIC_URL}/images/icons/free-icon-java-3291669.png`}
             alt=""
             loading="lazy"
             className="w-16 mb-1"
@@ -31,7 +31,7 @@ const Skill = () => {
           aria-label="Python"
         >
           <img
-            src="./images/icons/free-icon-python-5968350.png"
+            src={`${process.env.PUBLIC_URL}/images/icons/free-icon-python-5968350.png`}
             alt=""
             loading="lazy"
             className="w-16 mb-1"
@@ -47,7 +47,7 @@ const Skill = () => {
           aria-label="React"
         >
           <img
-            src="./images/icons/react-original.svg"
+            src={`${process.env.PUBLIC_URL}/images/icons/react-original.svg`}
             alt=""
             loading="lazy"
             className="w-16 mb-1"
@@ -64,7 +64,7 @@ const Skill = () => {
           aria-label="Spring FW & Boot"
         >
           <img
-            src="./images/icons/icons8-봄-로고-480.png"
+            src={`${process.env.PUBLIC_URL}/images/icons/icons8-봄-로고-480.png`}
             alt=""
             loading="lazy"
             className="w-16 mb-1"
@@ -80,7 +80,7 @@ const Skill = () => {
           aria-label="MySQL"
         >
           <img
-            src="./images/icons/free-icon-programing-15484291.png"
+            src={`${process.env.PUBLIC_URL}/images/icons/free-icon-programing-15484291.png`}
             alt=""
             loading="lazy"
             className="w-16 mb-1"
@@ -96,7 +96,7 @@ const Skill = () => {
           aria-label="Arduino"
         >
           <img
-            src="./images/icons/icons8-아두-이노-240.png"
+            src={`${process.env.PUBLIC_URL}/images/icons/icons8-아두-이노-240.png`}
             alt=""
             loading="lazy"
             className="w-16 mb-1"

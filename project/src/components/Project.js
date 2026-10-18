@@ -107,7 +107,7 @@ const Project = () => {
                               console.log(cnt);
                               const spaces = Array.from(
                                 { length: cnt },
-                                (_, i) => <span key={i}>&nbsp;</span>
+                                (_, i) => <span key={i}>&nbsp;</span>,
                               );
                               return (
                                 <li key={index}>
@@ -115,7 +115,7 @@ const Project = () => {
                                   {description}
                                 </li>
                               );
-                            }
+                            },
                           )}
                         </ol>
                       </div>
@@ -140,7 +140,7 @@ const Project = () => {
                         data-tooltip-content="Project Link"
                       >
                         <img
-                          src="./images/icons/github.svg"
+                          src={`${process.env.PUBLIC_URL}/images/icons/github.svg`}
                           alt="link to github page"
                           width="24px"
                           height="24px"
@@ -149,7 +149,7 @@ const Project = () => {
                       {project.linkCheck && (
                         <a href={project.link} target="_blank" rel="noreferrer">
                           <img
-                            src="./images/icons/external-link.svg"
+                            src={`${process.env.PUBLIC_URL}/images/icons/external-link.svg`}
                             alt="link to live website"
                             width="24px"
                             height="24px"
@@ -171,7 +171,7 @@ const Project = () => {
                             }}
                           >
                             <img
-                              src="./images/icons/video.svg"
+                              src={`${process.env.PUBLIC_URL}/images/icons/video.svg`}
                               alt="link to live website"
                               className="w-6 h-6"
                               width="24px"
