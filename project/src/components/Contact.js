@@ -1,5 +1,5 @@
 import React, { createElement, useContext, useEffect, useState } from "react";
-import { getTotalActiveUsersAndScreenPageViews } from "../utils/GA4";
+
 import classNames from "classnames";
 import { WindowWidthSize } from "../App";
 
