@@ -1,6 +1,44 @@
 // 멍줍, 빵이오, 자바 개인 프로젝트, 스마트팜, 탭검사기, 수로, 졸업논문
 const projects = [
   {
+    title: "OTA",
+    image: `${process.env.PUBLIC_URL}/images/OTA.png`,
+    description: [
+      {
+        titleDescription: "프로젝트 개요",
+        descriptionList: [
+          "  - ESP8266 기반 IoT 장치의 펌웨어를 무선으로 업데이트하는 OTA 시스템",
+          "  - 분산된 여러 IoT 장치의 펌웨어를 대시보드에서 관리하고 업데이트 시스템",
+        ],
+      },
+      {
+        titleDescription: "주요 기능",
+        descriptionList: [
+          "  - 무선 펌웨어 업데이트",
+          "  - 펌웨어 무결성 검사",
+          "  - MQTT 기반 IoT 장치와 백엔드 간 통신",
+          "  - 펌웨어 업로드 및 배포",
+          "  - IoT 상태 및 펌웨어 버전 관리",
+        ],
+      },
+    ],
+    tools: [
+      "Vue",
+      "NestJS",
+      "MySQL",
+      "ESP8266",
+      "Socket",
+      "MQTT",
+      "HTTP",
+    ],
+    github: "https://github.com/limdongsun0814/OTA",
+    linkCheck: false,
+    link: "",
+    video: "OTA.mp4",
+    videoMobile:
+      "https://1drv.ms/v/c/dd3bc808d6b4a8bc/IQT-uGc8giUkR4IZXQdX9JqOAa5KMRks8zkMQNJFn9JNPX0",
+    day: "2025-08 ~ 2026-10",
+  },{
     title: "멍줍",
     image: `${process.env.PUBLIC_URL}/images/멍줍.png`,
     description: [
