@@ -239,49 +239,49 @@ const projects = [
       "https://1drv.ms/v/c/dd3bc808d6b4a8bc/IQQUXJkM9X6OSqB2uwr6WngmAZ6fV6UR3xImQFQ5FIj88EI",
     day: "2019-01-02 ~ 2019-12-29 참여 인원: 4",
   },
-  {
-    title: "행성 탐사용 자동화 제어 로봇 개발",
-    image: `${process.env.PUBLIC_URL}/images/나사대회.png`,
-    description: [
-      {
-        titleDescription: "대회 목표",
-        descriptionList: [
-          "   - 로봇을 자동 제어하며 자원 탐지 / 자원 채취 / 기지 복귀 미션을 연속적으로 수행하면서 점수를 획득하는 대회",
-        ],
-      },
-      {
-        titleDescription: "대회 규칙",
-        descriptionList: [
-          "   - 로봇의 종류는 총 3가지 자원을 탐지하는 Scout, 채취하는 Excavator, 수송하는 Hauler",
-          "   - 로봇들은 공통적으로 IMU, LIDAR 센서, 스테레오 카메라 제공",
-          "   - 로봇들의 배터리는 태양광 패널 또는 Repair Station에서 충전 가능",
-          "   - Hauler가 Plant에 광물을 제출하면 점수 획득",
-        ],
-      },
-      {
-        titleDescription: "특징",
-        descriptionList: [
-          "   - IMU, SALM에서 발생된 누적 오차 제거를 위한 이미지 기반 좌표 보정",
-          "   - YOLO를 사용한 이미지 분류",
-          "   - 판별되지 못한 암석을 LIDAR 센서의 연속성로 감지로 추가로 판별 및 회피 기동",
-        ],
-      },
-      {
-        titleDescription: "담당역할",
-        descriptionList: [
-          "RTAB SLAM을 이용한 Mapping, YOLO를 이용한 장애물 및 현장 자원 판별, Docker를 통한 배포",
-        ],
-      },
-    ],
-    tools: ["Python", "ROS", "OpenCV", "YOLO", "Gazebo", "Docker"],
-    github: "https://github.com/limdongsun0814/Space-Robotics-Challenge",
-    linkCheck: true,
-    link: "https://www.riss.kr/search/detail/DetailView.do?p_mat_type=be54d9b8bc7cdb09&control_no=7b741b8df56ce8f9ffe0bdc3ef48d419",
-    video: "나사대회.mp4",
-    videoMobile:
-      "https://1drv.ms/v/c/dd3bc808d6b4a8bc/IQSpXT6HZihqRbwGrFkOSPrnAbrNePIengppe4bW8izCrV8",
-    day: "2020-03-16 ~ 2021-06-30 참여 인원: 4",
-  },
+  // {
+  //   title: "행성 탐사용 자동화 제어 로봇 개발",
+  //   image: `${process.env.PUBLIC_URL}/images/나사대회.png`,
+  //   description: [
+  //     {
+  //       titleDescription: "대회 목표",
+  //       descriptionList: [
+  //         "   - 로봇을 자동 제어하며 자원 탐지 / 자원 채취 / 기지 복귀 미션을 연속적으로 수행하면서 점수를 획득하는 대회",
+  //       ],
+  //     },
+  //     {
+  //       titleDescription: "대회 규칙",
+  //       descriptionList: [
+  //         "   - 로봇의 종류는 총 3가지 자원을 탐지하는 Scout, 채취하는 Excavator, 수송하는 Hauler",
+  //         "   - 로봇들은 공통적으로 IMU, LIDAR 센서, 스테레오 카메라 제공",
+  //         "   - 로봇들의 배터리는 태양광 패널 또는 Repair Station에서 충전 가능",
+  //         "   - Hauler가 Plant에 광물을 제출하면 점수 획득",
+  //       ],
+  //     },
+  //     {
+  //       titleDescription: "특징",
+  //       descriptionList: [
+  //         "   - IMU, SALM에서 발생된 누적 오차 제거를 위한 이미지 기반 좌표 보정",
+  //         "   - YOLO를 사용한 이미지 분류",
+  //         "   - 판별되지 못한 암석을 LIDAR 센서의 연속성로 감지로 추가로 판별 및 회피 기동",
+  //       ],
+  //     },
+  //     {
+  //       titleDescription: "담당역할",
+  //       descriptionList: [
+  //         "RTAB SLAM을 이용한 Mapping, YOLO를 이용한 장애물 및 현장 자원 판별, Docker를 통한 배포",
+  //       ],
+  //     },
+  //   ],
+  //   tools: ["Python", "ROS", "OpenCV", "YOLO", "Gazebo", "Docker"],
+  //   github: "https://github.com/limdongsun0814/Space-Robotics-Challenge",
+  //   linkCheck: true,
+  //   link: "https://www.riss.kr/search/detail/DetailView.do?p_mat_type=be54d9b8bc7cdb09&control_no=7b741b8df56ce8f9ffe0bdc3ef48d419",
+  //   video: "나사대회.mp4",
+  //   videoMobile:
+  //     "https://1drv.ms/v/c/dd3bc808d6b4a8bc/IQSpXT6HZihqRbwGrFkOSPrnAbrNePIengppe4bW8izCrV8",
+  //   day: "2020-03-16 ~ 2021-06-30 참여 인원: 4",
+  // },
   // {
   //   title: "졸업 논문",
   //   image: "./images/멍줍.png",
