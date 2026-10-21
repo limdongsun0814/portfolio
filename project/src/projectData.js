@@ -2,7 +2,7 @@
 const projects = [
   {
     title: "OTA",
-    image: `${process.env.PUBLIC_URL}/images/OTA.PNG`,
+    image: `${process.env.PUBLIC_URL}/images/OTA2.png`,
     description: [
       {
         titleDescription: "프로젝트 개요",
