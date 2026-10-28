@@ -17,6 +17,8 @@ function VideoPlayer(props) {
   const [menu, setMenu] = useState(false);
   const [played, setPlayed] = useState({ played: 0, totalPlayed: 0 });
   const [playbackRate, setPlaybackRate] = useState(1.0);
+  const [ displayTime, setDisplayTime] = useState(0);
+  const [loading, setLoading] = useState(false);
   const menuTimer = new MenuTimer();
 
   const handlePlaybackRate = (value) => {
@@ -71,6 +73,9 @@ function VideoPlayer(props) {
           setMenu(true);
           menuTimer.setTime(setMenu);
         }}
+        onSeek={() => {setLoading(false);}}
+        onBuffer={()=>{setLoading(true);}}
+        onBufferEnd={()=>{setLoading(false);}}
         width={"100%"}
         height={"100%"}
         volume={volumeToggle ? volume / 100 : 0}
@@ -98,6 +103,7 @@ function VideoPlayer(props) {
               X
             </h2>
           </div>
+          {loading&&<h1 className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 font-bold text-3xl ">Loading...</h1>}
           <div className="absolute bottom-0 flex w-full h-[10%] bg-opacity-50 bg-gray">
             {/* 시작 정지 */}
             <div className="w-[5%] h-full ">
@@ -182,13 +188,16 @@ function VideoPlayer(props) {
                   defaultValue={[0, 0]}
                   thumbsDisabled={[true, false]}
                   rangeSlideDisabled={true}
-                  value={[0, played.played]}
+                  value={[0, displayTime]}//played.played]}
                   onInput={(e) => {
                     console.log(e);
-                    playerRef.current.seekTo(e[1]);
+                    setDisplayTime(e[1]);
+                    //playerRef.current.seekTo(e[1]);
                     menuTimer.setClearTime();
                   }}
                   onThumbDragEnd={() => {
+                    setLoading(true);
+                    playerRef.current.seekTo(displayTime);
                     menuTimer.setTime(setMenu);
                   }}
                 />
