@@ -75,6 +75,7 @@ function VideoPlayer(props) {
         height={"100%"}
         volume={volumeToggle ? volume / 100 : 0}
         playbackRate={playbackRate}
+        progressInterval={500}
       ></ReactPlayer>
       {menu && (
         <div className="absolute top-0 flex w-[100.1%] h-full bg-opacity-50 select-none bg-gray">
